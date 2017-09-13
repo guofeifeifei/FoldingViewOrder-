@@ -1,7 +1,7 @@
 # FoldingViewOrder-
 ![image.gif](/Image/image.gif)
 
-先创建一个UICollectionView, UICollectionView的顶部偏移120高度，来最为UICollectionView的头部试图，在头部添加一个UICollectionView。
+先创建一个UICollectionView, UICollectionView的顶部偏移120高度，来做为UICollectionView的头部试图，在头部添加一个UICollectionView。
 ```object-C
     UICollectionViewFlowLayout * fl = [[UICollectionViewFlowLayout alloc]init];
     fl.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -42,7 +42,7 @@
     [_collectionView addSubview:headerView];
 ````
 实现UICollectionViewDataSource、UICollectionViewDelegate
-确定有几个区域，先判断是哪一个UICollectionView， 如果是头部UICollectionView，区数为1，如果是_collectionView，取数是3；
+确定有几个区域，先判断是哪一个UICollectionView， 如果是头部UICollectionView，区数为1，如果是_collectionView，区数是3；
 ````object-C
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     if (collectionView == _collectionView) {
